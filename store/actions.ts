@@ -6,10 +6,10 @@ import { IEvent } from '../types';
 export const fetchEvents = createAsyncThunk(
   'events/fetchEvents',
   async (count: number) => {
-    const responce = await axios.get<IEvent[]>(
+    const response = await axios.get<IEvent[]>(
       `/users/afc163/events/public?per_page=${count}`,
     );
 
-    return responce.data;
+    return response.data;
   },
 );
